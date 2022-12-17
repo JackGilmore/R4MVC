@@ -10,7 +10,7 @@ namespace R4Mvc.Tools
             FilePath = filePath;
             RelativePath = new Uri("~" + relativePath, UriKind.Relative);
             PagePath = pagePath;
-            IsPage = isPage;
+            IsRazorPage = isPage;
 
             var segments = pagePath.Split(new[] { '/', }, StringSplitOptions.RemoveEmptyEntries);
             Array.Resize(ref segments, segments.Length - 1);
@@ -21,7 +21,7 @@ namespace R4Mvc.Tools
         public string FilePath { get; }
         public Uri RelativePath { get; }
         public string PagePath { get; }
-        public bool IsPage { get; }
+        public bool IsRazorPage { get; }
         public string[] Segments { get; }
 
         public PageDefinition Definition { get; set; }

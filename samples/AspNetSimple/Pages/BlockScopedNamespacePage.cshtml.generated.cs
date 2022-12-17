@@ -16,17 +16,17 @@ using Microsoft.AspNetCore.Routing;
 using R4Mvc;
 using AspNetSimple;
 
-namespace AspNetSimple.Areas.Members.Controllers
+namespace AspNetSimple.Pages
 {
-    public partial class ManualAreaController
+    public partial class BlockScopedNamespacePageModel : IR4ActionResult
     {
         [GeneratedCode("R4Mvc", "1.0"), DebuggerNonUserCode]
-        public ManualAreaController()
+        public BlockScopedNamespacePageModel()
         {
         }
 
         [GeneratedCode("R4Mvc", "1.0"), DebuggerNonUserCode]
-        protected ManualAreaController(Dummy d)
+        protected BlockScopedNamespacePageModel(Dummy d)
         {
         }
 
@@ -83,60 +83,35 @@ namespace AspNetSimple.Areas.Members.Controllers
         }
 
         [GeneratedCode("R4Mvc", "1.0"), DebuggerNonUserCode]
-        public ManualAreaController Actions => MVC.Members.ManualArea;
+        string IR4ActionResult.Protocol => null;
         [GeneratedCode("R4Mvc", "1.0")]
-        public readonly string Area = "Members";
-        [GeneratedCode("R4Mvc", "1.0")]
-        public readonly string Name = "ManualArea";
-        [GeneratedCode("R4Mvc", "1.0")]
-        public const string NameConst = "ManualArea";
-        [GeneratedCode("R4Mvc", "1.0")]
-        static readonly ActionNamesClass s_ActionNames = new ActionNamesClass();
+        RouteValueDictionary m_RouteValueDictionary = new RouteValueDictionary{{"Page", "/BlockScopedNamespacePage"}};
         [GeneratedCode("R4Mvc", "1.0"), DebuggerNonUserCode]
-        public ActionNamesClass ActionNames => s_ActionNames;
+        RouteValueDictionary IR4ActionResult.RouteValueDictionary => m_RouteValueDictionary;
+        [GeneratedCode("R4Mvc", "1.0")]
+        public readonly string Name = "/BlockScopedNamespacePage";
+        [GeneratedCode("R4Mvc", "1.0")]
+        public const string NameConst = "/BlockScopedNamespacePage";
+        [GeneratedCode("R4Mvc", "1.0")]
+        static readonly HandlerNamesClass s_HandlerNames = new HandlerNamesClass();
         [GeneratedCode("R4Mvc", "1.0"), DebuggerNonUserCode]
-        public class ActionNamesClass
+        public HandlerNamesClass HandlerNames => s_HandlerNames;
+        [GeneratedCode("R4Mvc", "1.0"), DebuggerNonUserCode]
+        public class HandlerNamesClass
         {
-            public readonly string Index = "Index";
         }
 
         [GeneratedCode("R4Mvc", "1.0"), DebuggerNonUserCode]
-        public class ActionNameConstants
+        public class HandlerNameConstants
         {
-            public const string Index = "Index";
         }
-
-        [GeneratedCode("R4Mvc", "1.0"), DebuggerNonUserCode]
-        public class ViewsClass
-        {
-            static readonly _ViewNamesClass s_ViewNames = new _ViewNamesClass();
-            public _ViewNamesClass ViewNames => s_ViewNames;
-            public class _ViewNamesClass
-            {
-            }
-        }
-
-        [GeneratedCode("R4Mvc", "1.0")]
-        static readonly ViewsClass s_Views = new ViewsClass();
-        [GeneratedCode("R4Mvc", "1.0"), DebuggerNonUserCode]
-        public ViewsClass Views => s_Views;
     }
 
     [GeneratedCode("R4Mvc", "1.0"), DebuggerNonUserCode]
-    public partial class R4MVC_ManualAreaController : AspNetSimple.Areas.Members.Controllers.ManualAreaController
+    public partial class R4MVC_BlockScopedNamespacePageModel : AspNetSimple.Pages.BlockScopedNamespacePageModel
     {
-        public R4MVC_ManualAreaController() : base(Dummy.Instance)
+        public R4MVC_BlockScopedNamespacePageModel() : base(Dummy.Instance)
         {
-        }
-
-        [NonAction]
-        partial void IndexOverride(R4Mvc_Microsoft_AspNetCore_Mvc_ActionResult callInfo);
-        [NonAction]
-        public override Microsoft.AspNetCore.Mvc.IActionResult Index()
-        {
-            var callInfo = new R4Mvc_Microsoft_AspNetCore_Mvc_ActionResult(Area, Name, ActionNames.Index);
-            IndexOverride(callInfo);
-            return callInfo;
         }
     }
 }
